@@ -1,0 +1,11 @@
+dirc,./output_test/
+L,10
+Omega,1.5
+Delta_ini,-5.
+Delta_fin,5.
+U,15.
+chi,32
+dt,0.1
+T,10.
+N_steps,1
+ramp_time,10.

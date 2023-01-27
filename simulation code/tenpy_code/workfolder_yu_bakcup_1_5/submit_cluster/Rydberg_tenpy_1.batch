@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH -J TEST_rydberg_tenpy
+#SBATCH -p serial_requeue
+#SBATCH -n 1
+#SBATCH -c 1
+#SBATCH -N 1
+#SBATCH -t 1-23:00
+#SBATCH --mem 8G
+#SBATCH --account yao_lab
+#SBATCH --contiguous 
+#SBATCH --open-mode=appen 
+#SBATCH -o /n/home03/bye/tenpy_squeezing/workfolder_yu/output_cluster/TEST/%a_rydberg_tenpy.out
+#SBATCH -e /n/home03/bye/tenpy_squeezing/workfolder_yu/output_cluster/TEST/%a_rydberg_tenpy.err
+source /n/home03/bye/tenpy_squeezing/tenpy_bash
+export OMP_NUM_THREADS=1 
+srun --mpi=pmi2 -n 1 python -O /n/home03/bye/tenpy_squeezing/workfolder_yu/rydberg-1D_DiLILA_with_Rabi_ramp.py /n/home03/bye/tenpy_squeezing/workfolder_yu/params_Dilila

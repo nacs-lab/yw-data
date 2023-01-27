@@ -1,0 +1,16 @@
+dirc,/n/holyscratch01/yao_lab/Bingtian/rydberg_quench/
+L,13,1
+dt,0.00512
+hole_den,0.
+No,0
+T,3.
+Omega,1.125
+dinit,-5.
+gapinit,5.
+gapcrit,0.664
+gapfin,4.2
+dcrit,1.8
+dfin,6.
+tinflect,1.8545
+Trabi,0.6
+dtrabi,0.005

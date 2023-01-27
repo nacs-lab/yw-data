@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -J DiLILA_dynamite
+#SBATCH -p gpu_requeue
+#SBATCH -n 1
+#SBATCH -N 1
+#SBATCH -t 1-00:00
+#SBATCH --gres=gpu 
+#SBATCH --mem-per-cpu 10G
+#SBATCH --account yao_lab
+#SBATCH --constraint=a100
+#SBATCH --contiguous 
+#SBATCH --open-mode=appen 
+#SBATCH -o /n/holyscratch01/yao_lab/Bingtian/rydberg_quench2/%a_DiLILA_dynamite.out
+#SBATCH -e /n/holyscratch01/yao_lab/Bingtian/rydberg_quench2/%a_DiLILA_dynamite.out
+singularity exec --nv /n/home08/gdmeyer/dynamite/sifs/dynamite_latest-cuda.cc80.sif python -O /n/holystore01/LABS/yao_lab/Everyone/Bingtian/dynamite_simulation/rydberg_gap_ring_batch.py /n/holystore01/LABS/yao_lab/Everyone/Bingtian/dynamite_simulation/params_DiLILA_folder/gap_22_${SLURM_ARRAY_TASK_ID}.opts

@@ -1,0 +1,30 @@
+batch_options:
+   -J:squeezing_tenpy
+   -p:serial_requeue
+   -n:1
+   -c:1
+   -N:1
+   -t:1-23:00
+   --mem:8G
+   --account:yao_lab
+   --contiguous:
+   --open-mode=appen:
+run_options:
+   dirc:/n/home03/bye/tenpy_squeezing/workfolder_yu/output_cluster/
+   L:['20', '24']
+   Omega:22.2
+   U:15.
+   chi:['64', '128']
+   N_steps:1
+   Rabi_ramp_time:2
+   Rabi_ramp_dt:0.1
+   T_DiLILA:10.
+   Gap_init:5.26
+   Gap_crit:0.767
+   Gap_final:1.63
+   Delta_ini:-5.
+   Delta_crit:1.3
+   Delta_fin:3.
+   tinflect:7.
+   auto_tinflect:1.
+   dt:0.052

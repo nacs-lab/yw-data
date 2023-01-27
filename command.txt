@@ -1,0 +1,28 @@
+Login: ssh bye@login.rc.fas.harvard.edu
+Password: Maozedong429
+
+module load python/3.6.3-fasrc01
+to load the tenpy source  source ../tenpy_bash
+to download the tenpy result  scp -r bye@login.rc.fas.harvard.edu:/n/home03/bye/tenpy_squeezing/workfolder_yu/output_test/** .
+To request a interactive job node: salloc -p gpu_test --gres gpu --mem 3G -t 0-01:00          (the last "value" is time)
+
+To run dynamite: singularity exec --nv /n/home08/gdmeyer/dynamite/sifs/dynamite_latest-cuda.sif python quench_rydberg.py params_quench
+
+to download the data scp -r bye@login.rc.fas.harvard.edu:/n/holyscratch01/yao_lab/Bingtian/rydberg_quench/*L5_3*omega*ramp* .
+
+odyssey job submission code
+
+sbatch --array=0-17 test_squeezing_dynamite.batch
+
+module load python/3.6.3-fasrc01
+python submit_rydberg.py
+
+'dirc' in 'option' is for the outputs
+OUTPUT_DIR is for the .opts and .batch
+
+squeue: check the current status of the submitted jobs
+scancel: cancel the submitted jobs
+scontrol show jobid 25002138: check details of the submitted jobs
+
+
+upload code nd7ryw@DESKTOP-MJ7P4F2:/mnt/c/Users/wangy/Rydberg simulation/code/tenpy_code/energy_gap_linear_ramp$ scp -r params_Dilila bye@login.rc.fas.harvard.edu:/n/home03/bye/tenpy_squeezing/workfolder_yu/

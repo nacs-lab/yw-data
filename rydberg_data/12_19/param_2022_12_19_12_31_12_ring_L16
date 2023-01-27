@@ -1,0 +1,12 @@
+dirc,/n/holyscratch01/yao_lab/Bingtian/rydberg_quench/
+L,16,1
+dt,0.04
+hole_den,0.0
+No,0
+T,10
+Delta_ini,0
+Delta_fin,5.5
+Omega,1.55
+ramp_time,10
+V,10
+OBC,0

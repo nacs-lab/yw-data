@@ -1,0 +1,18 @@
+dirc,./output_test/
+L,20
+Omega,1.5
+U,8.
+chi,128
+N_steps,1
+Rabi_ramp_time,2
+Rabi_ramp_dt, 0.1
+T_DiLILA, 8.
+Gap_init, 5.26
+Gap_crit, 0.43
+Gap_final, 1.63
+Delta_ini,-5.
+Delta_crit, 1.6
+Delta_fin,3
+tinflect, 7.
+auto_tinflect,1
+dt,0.052

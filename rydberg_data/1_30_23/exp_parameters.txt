@@ -1,0 +1,12 @@
+Assuming rabi frequency = 1.5MHz(if it is not just scale up everything)
+
+parameters
+2us rabi ramp +
+Dilila ramp 6.5us 
+(MHz)
+'Delta_ini': '-5.',  'Gap_init':'5.26',
+'Delta_crit': '1.53','Gap_crit':'0.355',
+'Delta_final': 1.86, 'Gap_final' : '0.5'
+Measure datapoint at 
+detuning(MHz) = [1,1.5,1.55,1.6,1.65,1.8]
+time(us) = 4.3,6.9,7.35,7.7,7.9,8.5

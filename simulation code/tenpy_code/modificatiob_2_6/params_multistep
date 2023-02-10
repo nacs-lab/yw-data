@@ -1,0 +1,17 @@
+dirc,./output_test/
+L,24
+Omega,1.5
+U,9.
+chi,128
+N_steps,1
+Rabi_ramp_time,2
+Rabi_ramp_dt, 0.1
+T_UniLILA, 5.
+T_UniLILA_stop,1
+Gap_init, 5.26
+Gap_crit, 0.43
+Delta_ini,-5.
+Delta_crit, 1.6
+dt,0.052
+twait,2
+dt_wait,0.2

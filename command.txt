@@ -4,7 +4,9 @@ Password: Maozedong429
 module load python/3.6.3-fasrc01
 to load the tenpy source  source ../tenpy_bash
 to download the tenpy result  scp -r bye@login.rc.fas.harvard.edu:/n/home03/bye/tenpy_squeezing/workfolder_yu/output_test/** .
-To request a interactive job node: salloc -p gpu_test --gres gpu --mem 3G -t 0-01:00          (the last "value" is time)
+To request a interactive job node: 
+salloc -p test --mem 3G -t 0-01:00
+salloc -p gpu_test --gres gpu --mem 3G -t 0-01:00          (the last "value" is time)
 
 To run dynamite: singularity exec --nv /n/home08/gdmeyer/dynamite/sifs/dynamite_latest-cuda.sif python quench_rydberg.py params_quench
 

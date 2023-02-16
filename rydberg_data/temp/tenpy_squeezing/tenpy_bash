@@ -1,0 +1,3 @@
+module load Anaconda3/2020.11
+source activate env_tenpy
+export PYTHONPATH=/n/home03/bye/tenpy_squeezing/TeNPy

@@ -1,0 +1,125 @@
+commit a02f5216c47e9c0e1bb255f361a4a63b3fbb6d0f
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Thu Aug 19 16:29:18 2021 -0700
+
+    rename simulation_class_name -> simulation_class for more consistency
+    
+    Other simulation parameters are also called `algorithm_class` and `model_class`, not `..._class_name`.
+    Backwards compatible with warnings to update it.
+    
+    Also, fix ``--sim-class`` command line argument of `tenpy_run` and `python -m tenpy` to take precedence over yaml parameter.
+
+commit d0d1dc3f9b9402a6401332f88d093e1193cfe47d
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Thu Aug 19 12:31:38 2021 -0700
+
+    add reference to mixed xk representation
+
+commit c2507685a52661831557a53268280e1e247a2dce
+Merge: 46f9935 a974b9a
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Thu Aug 19 12:05:09 2021 -0700
+
+    Merge branch 'mixed_xk' into main
+    
+    A big shout out to Wilhelm Kadow for his great work on this!
+
+commit 46f9935ab7939464ed0580957fd0c1818765b76c
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Thu Aug 19 11:18:16 2021 -0700
+
+    suppress expected warnings upon hdf5 export of test data
+
+commit 424bcd6ac3a860544f09e18c83aa98f381e3428e
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Wed Aug 18 15:46:38 2021 -0700
+
+    DMRG memory optimization: clean up eff_H at end of update
+
+commit 1ab1f8dd01c9a30dc6b8d96dd65a9352534e9522
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Wed Aug 18 14:48:53 2021 -0700
+
+    fix for merge_recursive
+
+commit fbe511a120aee1e689dc52938d6c2a5162608663
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Thu Aug 12 12:12:37 2021 -0700
+
+    update __all__
+
+commit 291cbb662a6aa09f9b8d082d76f3e4270f917386
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Thu Aug 12 12:03:14 2021 -0700
+
+    implement `merge_recursive` for nested dicts
+
+commit 5fcdea9181e5a4ebdc8c0aaa77572aa40ab708eb
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Wed Aug 11 16:23:13 2021 -0700
+
+    don't warn about unused P_tol reset by P_tol_to_trunc
+
+commit 0befd1d544200a3ed3dbe47f744de46cbc6621f8
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Wed Aug 11 14:20:50 2021 -0700
+
+    DMRG: re-activate mixer in when growing bond dim with chi_list
+
+commit de7d3cb43e52acd0e8e09cbb9ff8df92c3268232
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Mon Aug 9 17:49:41 2021 -0700
+
+    fix entanglement entropy estimate printed during DMRG log
+    
+    The printed entropy was calculated with the singular values instead of
+    their square. This affects only the log output, not the values/state
+    returned, and also not the values of the "measurement" simulation.
+
+commit 66697f76bec4ad812a8583bcb1acf5b791fe3f14
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Fri Aug 6 17:12:04 2021 -0700
+
+    log making measurements
+
+commit 6c9d5d6c70145f233c0510d09ddccffb9eefc459
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Mon Jul 26 01:44:59 2021 -0700
+
+    bump notebooks
+
+commit b8452c71f7e5fc4104fcee663c8a8f455a1ae48e
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Sun Jul 25 23:30:25 2021 -0700
+
+    fix: segment boundary MPS should have periodic bc along MPS direction
+    
+    The reason is that we want to have compatible MPO boundaries.
+
+commit f6d43ccb58d5ab5a9efd1abc12303e3d69f80724
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Sun Jul 25 20:06:47 2021 -0700
+
+    use approx. S for DMRG convergence while mixer is enabled
+
+commit 093a1747a0e0f4e66624f5b10a6a90dc2d5e941c
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Sun Jul 25 18:41:15 2021 -0700
+
+    don't build PDF doc: nbsphinx with recent sphinx is broken
+    
+    https://github.com/spatialaudio/nbsphinx/issues/584
+
+commit 40b907c976c35faeadbe0821bb18d50662ab1d14
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Sun Jul 25 17:31:24 2021 -0700
+
+    update jupyter notebooks
+
+commit c242da89d1ec6c342312f55cf91724fee4903aa7
+Author: Johannes Hauschild <git@johannes-hauschild.de>
+Date:   Sun Jul 25 17:28:34 2021 -0700
+
+    add yaml config examples to doc
+    
+    also cleanup doc example stubs from git

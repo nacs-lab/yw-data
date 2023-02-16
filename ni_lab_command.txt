@@ -1,0 +1,1 @@
+salloc -p ni_lab --mem 1G -c 32 -t 0-12:00

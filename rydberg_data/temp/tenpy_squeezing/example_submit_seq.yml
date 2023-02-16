@@ -1,0 +1,27 @@
+#!/usr/bin/env -S python cluster_jobs.py submit example_submit.yml
+# requires that `model_custom.py` can be imported.
+ 
+# This file contains the necessary adjustments to the `example_submit.yml` to run sequential simulations instead where chi is increased gradually:
+#
+# - Use `run_seq_simulations` instead of `run_simulation` in job_config.task.function
+# - Make sure to use the global `output_filename_params` expanded by TeNPy
+# - Add the global `sequential` section with the parameter that should be changed sequentially, 
+#   and remove that parameter from job_config.change_parameters.recursive_keys
+#
+# You can submit this file with
+#   python cluster_jobs.py submit -c last example_submit.yml example_submit_seq.yml
+
+
+job_config:
+    task: 
+        function: run_seq_simulations
+
+    change_parameters:
+        recursive_keys:
+            - model_params.B
+            - model_params.D
+
+sequential:
+    recursive_keys:
+        - algorithm_params.trunc_params.chi_max
+

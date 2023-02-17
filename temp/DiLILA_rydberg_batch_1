@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH -J DiLILA_dynamite
+#SBATCH -p gpu_requeue
+#SBATCH -n 1
+#SBATCH -N 1
+#SBATCH -t 2-12:00
+#SBATCH --gres=gpu 
+#SBATCH --mem-per-cpu 300G
+#SBATCH --account ni_lab
+#SBATCH --constraint=a100
+#SBATCH --contiguous 
+#SBATCH --open-mode=appen 
+#SBATCH -o /n/home09/nd7ryw/holyholyscratch/dynamite/two_hole.out
+#SBATCH -e /n/home09/nd7ryw/holyholyscratch/dynamite/two_hole.err
+singularity exec --nv /n/home08/gdmeyer/dynamite/sifs/dynamite_latest-cuda.cc70.sif python /n/home09/nd7ryw/dynamite_simulation/DiLILA_Rabi_ramp_ring_twoholes.py /n/home09/nd7ryw/dynamite_simulation/params_DiLILA_rabi_ramp
+
+#singularity exec --nv /n/home08/gdmeyer/dynamite/sifs/dynamite_latest-cuda.cc70.sif python -O /n/home09/nd7ryw/dynamite_simulation/DiLILA_Rabi_ramp_ring_twoholes.py /n/home09/nd7ryw/dynamite_simulation/params_DiLILA_rabi_ramp_hole
